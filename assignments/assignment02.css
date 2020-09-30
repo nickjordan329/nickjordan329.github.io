@@ -1,3 +1,87 @@
 body{
 	background-color:skyblue;
+	id:"igottabeme";
 }
+#igottabeme{
+	font-family:Arial, Helvetica, sans-serif;
+}
+.classy{
+	margin-left:10px;
+}
+div{
+	margin-bottom:50px;
+	}
+span{
+	width:100px;
+	height:50px;
+	padding:5px 20px;
+	border-style:solid;
+	border-width:5px;
+	border-color:blue; 
+	background-color:yellow;
+}
+span.a{
+	display: inline;
+}
+span.b{
+	display:block;
+}
+span.c{
+	display:inline-block;
+}
+img[alt="cat icon"]{
+	position:fixed;
+	bottom:0;
+	right:0;
+	z-index:0;
+}
+img[alt="dog icon"]{
+	position:relative;
+	bottom:150px;
+	right:50px;
+}
+div#positionMe{
+	position:relative;
+	background-color:orange;
+}
+img[alt="bird icon"]{
+	z-index:0;
+	position:absolute;
+	top:50px;
+	left:250px;
+}
+nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: lime;
+  position:sticky;
+  top:0;
+  width:100%;
+  padding:5px;
+  z-index:2;
+}
+
+nav a {
+  opacity:0.9;
+  display: inline;
+  font-size:20px;
+}
+tr:nth-child(even){
+	background-color:lightgray;
+}
+td:hover{
+	background-color:yellow;
+}
+td:nth-child(even){
+	text-align:right;
+}
+input[name="fname"]:focus{
+	background-color:pink;
+}
+input[name="lname"]:focus{
+	background-color:pink;
+}
+
+

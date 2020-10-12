@@ -1,0 +1,33 @@
+body{
+	background-color:skyblue;
+	id:"igottabeme";
+}
+#igottabeme{
+	font-family:Arial, Helvetica, sans-serif;
+}
+.classy{
+	margin-left:10px;
+}
+div{
+	margin-bottom:50px;
+	}
+span{
+	width:100px;
+	height:50px;
+	padding-left:20px;
+	padding-right:20px;
+	border-color:blue 5px; 
+	background-color:yellow;
+}
+span.a{
+	color:green;
+	word wrap but height doesn't work
+}
+span.b{
+	color:blue;
+	spans appear stack ontop
+}
+span.c{
+	color:white;
+	word-wrap but height property works
+}

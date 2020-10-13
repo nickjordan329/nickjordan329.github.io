@@ -81,7 +81,7 @@ function add1 (elem) {
 }
 
 //create function "sub1"
-function add1 (elem) {
+function sub1 (elem) {
   if(elem.children[2].innerHTML == "-") 
     elem.children[2].innerHTML = "-";
   else {

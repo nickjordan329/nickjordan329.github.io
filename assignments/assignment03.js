@@ -18,6 +18,7 @@ elem[15] = document.getElementById("15");
 elem[16] = document.getElementById("16");
 elem[17] = document.getElementById("17");
 elem[18] = document.getElementById("18");
+elem[19]=document.getElementById("totals");
 
 // display the number of children (all td elements)
 // console.log(elem.children.length);
@@ -73,30 +74,35 @@ function add1 (elem) {
     let currentScore = elem.children[2].innerHTML;
     currentScore = Number.parseInt(currentScore);
     elem.children[2].innerHTML = currentScore + 1;
-	//adjust the over
-	let par = elem.children[1].innerHTML;
+    currentScore+=1;
+	//take care of over.
+    let par = elem.children[1].innerHTML;
 	par = Number.parseInt(par);
 	elem.children[3].innerHTML=currentScore - par;
   }
 }
-
-//create function "sub1"
 function sub1 (elem) {
-  if(elem.children[2].innerHTML == "-") 
+  if( elem.children[2].innerHTML == "-" || elem.children[2].innerHTML== "1"){
     elem.children[2].innerHTML = "-";
+    elem.children[3].innerHTML="-";
+  }
   else {
     let currentScore = elem.children[2].innerHTML;
     currentScore = Number.parseInt(currentScore);
     elem.children[2].innerHTML = currentScore - 1;
-	if(currentScore!=0 || currentScore!="-")
-	{
-		let par = elem.children[1].innerHTML;
-		par = Number.parseInt(par);
-		elem.children[3].innerHTML=currentScore - par;
-	}
-	else if(currentScore==0)
-	{
-		elem.children[2].innerHTML = "-";
-	}
+    currentScore-=1;
+    //take care of over.
+    if(currentScore!=0)
+	  {
+		  let par = elem.children[1].innerHTML;
+		  par = Number.parseInt(par);
+		  elem.children[3].innerHTML=currentScore - par;
+	  }
   }
 }
+
+//REWORK AND MAKE 4 new functions
+//2 for totalScoreSub and totalScoreAdd which is easier
+//2 for totalOverSub and totalOverAdd which what we'll do is I'll
+//eliminate the number that was being provided from the previous iteration then add in the new number to adjust
+//have to parse nothing for totalScores have to parse Over+1 or over-1 based on which fxn is calling. 

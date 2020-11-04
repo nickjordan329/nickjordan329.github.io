@@ -1,12 +1,21 @@
 <html lang="en">
+
 <head>
+
 	<title>ClubMeNow - Distance List</title>
-	<link rel="icon" href="clubMeNow300x300.png" type="image/png" />
-	<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css' />
-	<link rel='stylesheet' href='clubMeNow.css' />
+	<link rel="icon" href="SpookyBlackCat.github.io/Assignments/clubMeNow/clubMeNow300x300.png" type="image/png" />
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" 
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css" />
+	<!-- ClubMeNow custom CSS -->
+	<link rel="stylesheet" href="clubMeNow.css" />
+	
 </head>
-<body onload='appendTableRows();>
+
+<body onload='appendTableRows(); // called second'> 
+
 <div class='container'>
+
 	<h1 class="cmn_alignCenter cmn_fullHeight">Club Me Now</h1>
 	<table id='clubTable' class='table table-striped'>
 	  <tbody>
@@ -23,7 +32,8 @@
 			    &nbsp;&nbsp;+&nbsp;&nbsp;</button></th>
 		</tr>
 	  </tbody>
-	</table>	
+	</table>
+	
 	<button class='btn btn-warning cmn_fullHeight' 
 	  onclick='undoLastShot();           // called if user clicked'>Undo</button> 
 	<button class='btn btn-danger cmn_fullHeight' 
@@ -32,10 +42,14 @@
 	  onclick='displayAbout();           // called if user clicked'>About</button> 
 	<br>
 	<br>
-	<footer>Copyright &copy;2020 George Corser</footer>	
+	<footer>Copyright &copy;2020 George Corser</footer>
+	
 </div>
+
+<!-- ClubMeNow custom JS -->
 <script src='clubMeNow.js'></script>
-<script>var clubs = loadClubDistances(); </script>
-<script> var clubsOld = loadClubDistances(); </script>
+<script>let clubs = loadClubDistances(); // called first</script>
+
 </body>
+
 </html>
